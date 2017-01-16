@@ -1,7 +1,7 @@
 #!/bin/bash/
 #This file was created by matechia.xyz
 #It is released under the GPLv3 license
-#You are free to copy it and/or share it
+#You are free to copy it, modify it, and/or share it
 #Just please give credit to matechia.xyz
 sudo apt-get install apache2 \
 arandr \
