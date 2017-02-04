@@ -51,6 +51,7 @@ scrot \
 shotwell \
 simple-image-reducer \
 soundconverter \
+spyder3 \
 sshfs \
 stopwatch \
 sysinfo \
