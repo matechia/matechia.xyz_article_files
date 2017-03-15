@@ -51,4 +51,4 @@ vlc \
 whois \
 wine \
 xfce4-power-manager \
-youtube-dl \
+youtube-dl
