@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Javascript Program To Generate Roman Numerals 1 To 3999</title>
+
+<script>
+function convertToRoman(num) {
+
+  romanNumerals = {1:'I',2:'II',3:'III',4:'IV',5:'V',6:'VI',7:'VII',8:'VIII',9:'IX',10:'X',40:'XL',50:'L',90:'XC',100:'C',400:'CD',500:'D',900:'CM',1000:'M'};
+  var yourNumeral = "";
+  if (num >= 1 && num <= 10) {
+    return romanNumerals[num];
+  }
+
+  else if (num >= 11 && num <= 39) {
+    remainder = num % 10;
+    quotient = Math.floor(num / 10);
+
+    for (x = 0; x < quotient; x++) {
+      yourNumeral = yourNumeral + romanNumerals[10];
+    }
+
+    //now add remainder if remainder is not 0
+    if (remainder !== 0) {
+      yourNumeral = yourNumeral + romanNumerals[remainder];
+    }
+
+    return yourNumeral;
+  }
+
+  else if (num >= 40 && num <= 49) {
+    remainder = num % 10;
+    yourNumeral = yourNumeral + romanNumerals[40];
+
+    //now add remainder if remainder is not 0
+    if (remainder !== 0) {
+      yourNumeral = yourNumeral + romanNumerals[remainder];
+    }
+    return yourNumeral;
+  }
+
+  else if (num >= 50 && num <= 89) {
+    remainder = num % 10;
+    quotient = Math.floor(num / 10);
+    yourNumeral = yourNumeral + romanNumerals[50];
+
+    //going from 50 onwards, 60/10 is 6 so just only add 1 'X' which is just 6 -5 = 1 'X'
+    for (x = 0; x < quotient - 5; x++) {
+      yourNumeral = yourNumeral + romanNumerals[10];
+    }
+
+    //now add remainder if remainder is not 0
+    if (remainder !== 0) {
+      yourNumeral = yourNumeral + romanNumerals[remainder];
+    }
+    return yourNumeral;
+  }
+
+  else if (num >= 90 && num <= 99) {
+    remainder = num % 10;
+    yourNumeral = yourNumeral + romanNumerals[90];
+
+    //now add remainder if remainder is not 0
+    if (remainder !== 0) {
+      yourNumeral = yourNumeral + romanNumerals[remainder];
+    }
+    return yourNumeral;
+  }
+
+  else if (num >= 100 && num <= 399) {
+    hundredRemainder = num % 100;
+    hundredquotient = Math.floor(num / 100);
+
+    for (x = 0; x < hundredquotient; x++) {
+      yourNumeral = yourNumeral + romanNumerals[100];
+    }
+
+    //now add remainder if remainder is not 0
+    if (hundredRemainder !== 0) {
+      //some recursion
+      yourNumeral = yourNumeral + convertToRoman(hundredRemainder);
+    }
+    return yourNumeral;
+  }
+
+  else if (num >= 400 && num <= 499) {
+    hundredRemainder = num % 100;
+    yourNumeral = yourNumeral + romanNumerals[400];
+
+    //now add remainder if remainder is not 0
+    if (hundredRemainder !== 0) {
+      //some recursion
+      yourNumeral = yourNumeral + convertToRoman(hundredRemainder);
+    }
+    return yourNumeral;
+  }
+
+  else if (num >= 500 && num <= 899) {
+    hundredRemainder = num % 100;
+    hundredquotient = Math.floor(num / 100);
+    yourNumeral = yourNumeral + romanNumerals[500];
+
+    //going from 500 onwards, 600/10 is 6 so just only add 1 'C' which is just 6 -5 = 1 'C'
+    for (x = 0; x < hundredquotient - 5; x++) {
+      yourNumeral = yourNumeral + romanNumerals[100];
+    }
+
+    //now add remainder if remainder is not 0
+    if (hundredRemainder !== 0) {
+      //some recursion
+      yourNumeral = yourNumeral + convertToRoman(hundredRemainder);
+    }
+    return yourNumeral;
+  }
+
+  else if (num >= 900 && num <= 999) {
+    hundredRemainder = num % 100;
+    yourNumeral = yourNumeral + romanNumerals[900];
+
+    //now add remainder if remainder is not 0
+    if (hundredRemainder !== 0) {
+      //some recursion
+      yourNumeral = yourNumeral + convertToRoman(hundredRemainder);
+    }
+    return yourNumeral;
+  }
+
+  else if (num >= 1000 && num <= 3999) {
+    thousandRemainder = num % 1000;
+    thousandquotient = Math.floor(num / 1000);
+
+    for (x = 0; x < thousandquotient; x++) {
+      yourNumeral = yourNumeral + romanNumerals[1000];
+    }
+
+    //now add remainder if remainder is not 0
+    if (thousandRemainder !== 0) {
+      //some recursion
+      yourNumeral = yourNumeral + convertToRoman(thousandRemainder);
+    }
+    return yourNumeral;
+  }
+
+}
+
+
+for (xx = 1; xx <= 3999; xx++) {
+  document.write(xx, " : ", convertToRoman(xx),"<br>");
+}
+
+</script>
+</head>
+</html>
