@@ -1,10 +1,10 @@
 #!/bin/bash/
-#This file was created by matechia.xyz
+#This file was created by linuxwebdevelopment.com
 #It is released under the GPLv3 license
 #You are free to copy it, modify it, and/or share it
-#Just please give credit to matechia.xyz
+#Just please give credit to linuxwebdevelopment.com
 #this is a list of software to install every time in Trisquel 7.0
-#This comes from the article on matechia.xyz at https://matechia.xyz/software-install-every-time-trisquel/
+#This comes from the article on linuxwebdevelopment.com at https://linuxwebdevelopment.com/software-install-every-time-trisquel/
 
 sudo apt-get install abrowser \
 alarm-clock-applet \
