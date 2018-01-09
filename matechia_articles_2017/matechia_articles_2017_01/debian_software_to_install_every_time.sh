@@ -1,8 +1,11 @@
 #!/bin/bash/
-#This file was created by matechia.xyz
+#This file was created by linuxwebdevelopment.com
 #It is released under the GPLv3 license
 #You are free to copy it, modify it, and/or share it
-#Just please give credit to matechia.xyz
+#Just please give credit to linuxwebdevelopment.com
+#this is a list of software to install every time in Debian Jessie
+#This comes from the article on linuxwebdevelopment.com at:
+#https://linuxwebdevelopment.com/software-to-install-every-time-with-debian-jessie/
 sudo apt-get install alarm-clock-applet \
 apache2 \
 arandr \
