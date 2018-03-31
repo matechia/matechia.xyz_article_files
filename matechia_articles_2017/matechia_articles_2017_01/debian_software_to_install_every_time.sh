@@ -35,7 +35,6 @@ links2 \
 lynx \
 mariadb-server \
 mnemosyne \
-openjdk-7-jdk \
 openvpn \
 pavucontrol \
 phatch \
