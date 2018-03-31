@@ -27,7 +27,6 @@ gtick \
 gtimelog \
 hunspell hunspell-en-us myspell-en-gb \
 ibus ibus-pinyin \
-icedove \
 ipython3 \
 ipython3-qtconsole \
 keepassx \
@@ -47,6 +46,7 @@ soundconverter \
 spyder3 \
 sshfs \
 stopwatch \
+thunderbird \
 ufw \
 vim \
 vinagre \
